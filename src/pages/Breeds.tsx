@@ -28,41 +28,34 @@ const Breeds: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen py-12 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary-400 mb-4">
-            Dog Breed Database
-          </h1>
-          <p className="text-xl text-primary-500">
-            Explore our comprehensive database of dog breeds with detailed information about each breed's characteristics.
-          </p>
-        </div>
+    <div className="page">
+      <div className="page-content">
+        <h1 className="page-title">Dog Breed Database</h1>
+        <p className="page-text" style={{textAlign: 'center', fontSize: '1.2rem', marginBottom: '3rem'}}>
+          Explore our comprehensive database of dog breeds with detailed information about each breed's characteristics.
+        </p>
 
         {/* Search and Filters */}
-        <div className="card mb-12">
-          <div className="mb-6">
+        <div className="card page-section">
+          <div className="form-group">
             <input
               type="text"
               placeholder="Search breeds..."
               value={filters.searchTerm}
               onChange={(e) => handleFilterChange('searchTerm', e.target.value)}
-              className="input-field"
+              className="form-input"
             />
           </div>
 
-          <div className="flex flex-wrap gap-4 mb-6">
-            <div className="flex flex-wrap gap-2">
-              <span className="font-semibold text-primary-400 mr-2">Size:</span>
+          <div style={{marginBottom: '1.5rem'}}>
+            <div style={{display: 'flex', flexWrap: 'wrap', gap: '0.5rem', alignItems: 'center'}}>
+              <span className="form-label" style={{margin: 0, marginRight: '0.5rem'}}>Size:</span>
               {['all', 'small', 'medium', 'large', 'giant'].map(size => (
                 <button
                   key={size}
                   onClick={() => handleFilterChange('size', size)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    filters.size === size
-                      ? 'bg-primary-300 text-white'
-                      : 'btn-secondary'
-                  }`}
+                  className={filters.size === size ? 'btn-primary' : 'btn-secondary'}
+                  style={{padding: '0.5rem 1rem', fontSize: '0.9rem'}}
                 >
                   {size.charAt(0).toUpperCase() + size.slice(1)}
                 </button>
@@ -70,18 +63,15 @@ const Breeds: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4">
-            <div className="flex flex-wrap gap-2">
-              <span className="font-semibold text-primary-400 mr-2">Energy:</span>
+          <div>
+            <div style={{display: 'flex', flexWrap: 'wrap', gap: '0.5rem', alignItems: 'center'}}>
+              <span className="form-label" style={{margin: 0, marginRight: '0.5rem'}}>Energy:</span>
               {['all', 'low', 'moderate', 'high'].map(energy => (
                 <button
                   key={energy}
                   onClick={() => handleFilterChange('energy', energy)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    filters.energy === energy
-                      ? 'bg-primary-300 text-white'
-                      : 'btn-secondary'
-                  }`}
+                  className={filters.energy === energy ? 'btn-primary' : 'btn-secondary'}
+                  style={{padding: '0.5rem 1rem', fontSize: '0.9rem'}}
                 >
                   {energy.charAt(0).toUpperCase() + energy.slice(1)} Energy
                 </button>
@@ -92,12 +82,12 @@ const Breeds: React.FC = () => {
 
         {/* Results */}
         {filteredBreeds.length === 0 ? (
-          <div className="text-center py-12">
-            <h3 className="text-2xl font-bold text-primary-400 mb-4">No breeds found</h3>
-            <p className="text-primary-500">Try adjusting your search criteria to find more breeds.</p>
+          <div className="page-section" style={{textAlign: 'center', padding: '3rem 0'}}>
+            <h3 className="section-heading">No breeds found</h3>
+            <p className="page-text">Try adjusting your search criteria to find more breeds.</p>
           </div>
         ) : (
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem'}}>
             {filteredBreeds.map(breed => (
               <BreedCard key={breed.name} breed={breed} />
             ))}

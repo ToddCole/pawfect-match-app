@@ -71,23 +71,19 @@ const TrainingTips: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen py-12 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary-400 mb-4">
-            Training Tips
-          </h1>
-          <p className="text-xl text-primary-500 max-w-3xl mx-auto">
-            Proven training techniques to help you build a strong, positive relationship with your dog.
-          </p>
-        </div>
+    <div className="page">
+      <div className="page-content">
+        <h1 className="page-title">Training Tips</h1>
+        <p className="page-text" style={{textAlign: 'center', fontSize: '1.2rem', marginBottom: '3rem'}}>
+          Proven training techniques to help you build a strong, positive relationship with your dog.
+        </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
           {trainingTopics.map((topic, index) => (
-            <div key={index} className="card hover:shadow-xl transition-all duration-300">
-              <div className="text-4xl mb-4 text-center">{topic.icon}</div>
-              <h3 className="text-2xl font-bold text-primary-400 mb-4">{topic.title}</h3>
-              <p className="text-primary-500 mb-6 leading-relaxed">{topic.description}</p>
+            <div key={index} className="card">
+              <div style={{fontSize: '2.5rem', marginBottom: '1rem', textAlign: 'center'}}>{topic.icon}</div>
+              <h3 className="subsection-heading">{topic.title}</h3>
+              <p className="page-text">{topic.description}</p>
               
               <ul className="space-y-3">
                 {topic.tips.map((tip, tipIndex) => (

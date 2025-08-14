@@ -80,49 +80,53 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen py-12 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary-400 mb-4">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-xl text-primary-500">
-            Find answers to common questions about our breed matching service and dog ownership.
-          </p>
-        </div>
+    <div className="page">
+      <div className="page-content">
+        <h1 className="page-title">Frequently Asked Questions</h1>
+        <p className="page-text" style={{textAlign: 'center', fontSize: '1.2rem', marginBottom: '3rem'}}>
+          Find answers to common questions about our breed matching service and dog ownership.
+        </p>
 
         {faqs.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="mb-12">
-            <h2 className="text-2xl font-bold text-primary-400 mb-6 border-l-4 border-primary-300 pl-4">
+          <div key={categoryIndex} className="page-section">
+            <h2 className="section-heading" style={{borderLeft: '4px solid var(--primary-300)', paddingLeft: '1rem'}}>
               {category.category}
             </h2>
             
-            <div className="space-y-4">
+            <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
               {category.questions.map((faq, questionIndex) => {
                 const questionId = categoryIndex * 100 + questionIndex;
                 const isOpen = openQuestion === questionId;
                 
                 return (
-                  <div key={questionIndex} className="card">
+                  <div key={questionIndex} className="faq-item">
                     <button
                       onClick={() => toggleQuestion(categoryIndex, questionIndex)}
-                      className="w-full text-left flex justify-between items-start"
+                      className="faq-question"
+                      style={{
+                        width: '100%',
+                        textAlign: 'left',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-start'
+                      }}
                     >
-                      <h3 className="text-lg font-semibold text-primary-400 pr-4">
+                      <span style={{paddingRight: '1rem'}}>
                         {faq.question}
-                      </h3>
-                      <span className={`text-primary-300 text-xl transition-transform duration-200 ${
-                        isOpen ? 'rotate-180' : ''
-                      }`}>
+                      </span>
+                      <span style={{
+                        color: 'var(--primary-300)',
+                        fontSize: '1.2rem',
+                        transition: 'transform 0.2s',
+                        transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)'
+                      }}>
                         ⌄
                       </span>
                     </button>
                     
                     {isOpen && (
-                      <div className="mt-4 pt-4 border-t border-primary-200">
-                        <p className="text-primary-500 leading-relaxed">
-                          {faq.answer}
-                        </p>
+                      <div className="faq-answer">
+                        <p>{faq.answer}</p>
                       </div>
                     )}
                   </div>
@@ -133,14 +137,15 @@ const FAQ: React.FC = () => {
         ))}
 
         {/* Contact section */}
-        <div className="card bg-gradient-to-r from-primary-200 to-primary-100 border-primary-200 text-center mt-16">
-          <h2 className="text-2xl font-bold text-primary-400 mb-4">Still Have Questions?</h2>
-          <p className="text-lg text-primary-500 mb-6">
+        <div className="card page-section" style={{
+          background: 'linear-gradient(135deg, var(--primary-200) 0%, var(--primary-100) 100%)',
+          textAlign: 'center'
+        }}>
+          <h2 className="section-heading">Still Have Questions?</h2>
+          <p className="page-text" style={{fontSize: '1.1rem', marginBottom: '1.5rem'}}>
             Can't find what you're looking for? We're here to help!
           </p>
-          <button className="btn-primary">
-            Contact Us
-          </button>
+          <button className="btn-primary">Contact Us</button>
         </div>
       </div>
     </div>
