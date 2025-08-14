@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { QuizAnswer, BreedMatch } from '../../types';
+import type { QuizAnswer, BreedMatch } from '../../types';
 import { quizQuestions } from '../../utils/quizData';
 import { breedDatabase } from '../../utils/breedData';
 import QuizQuestion from './QuizQuestion';

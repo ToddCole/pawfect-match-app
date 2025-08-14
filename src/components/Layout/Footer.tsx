@@ -17,17 +17,17 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4" style={{color: '#F7BE89'}}>Resources</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/breeds" className="text-gray-200 transition-colors" style={{'&:hover': {color: '#F7BE89'}}}>
+                <Link to="/breeds" className="text-gray-200 transition-colors hover:text-[#F7BE89]">
                   Breed Database
                 </Link>
               </li>
               <li>
-                <Link to="/care-guides" className="text-gray-200 transition-colors" style={{'&:hover': {color: '#F7BE89'}}}>
+                <Link to="/care-guides" className="text-gray-200 transition-colors hover:text-[#F7BE89]">
                   Care Guides
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-200 transition-colors" style={{'&:hover': {color: '#F7BE89'}}}>
+                <Link to="#" className="text-gray-200 transition-colors hover:text-[#F7BE89]">
                   Training Tips
                 </Link>
               </li>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { NavigationProps } from '../../types';
+import type { NavigationProps } from '../../types';
 
 interface HeaderProps extends NavigationProps {}
 

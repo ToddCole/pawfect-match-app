@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Quiz from '../components/Quiz/Quiz';
-import { BreedMatch } from '../types';
+import type { BreedMatch } from '../types';
 
 const Home: React.FC = () => {
   const [showQuiz, setShowQuiz] = useState(false);

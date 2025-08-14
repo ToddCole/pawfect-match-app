@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breed } from '../../types';
+import type { Breed } from '../../types';
 
 interface BreedCardProps {
   breed: Breed;

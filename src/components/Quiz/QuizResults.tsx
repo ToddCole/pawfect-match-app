@@ -1,5 +1,5 @@
 import React from 'react';
-import { BreedMatch } from '../../types';
+import type { BreedMatch } from '../../types';
 import BreedCard from '../Breeds/BreedCard';
 
 interface QuizResultsProps {

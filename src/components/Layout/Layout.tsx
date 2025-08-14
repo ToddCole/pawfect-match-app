@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import { NavigationProps } from '../../types';
+import type { NavigationProps } from '../../types';
 
 interface LayoutProps extends NavigationProps {
   children: React.ReactNode;

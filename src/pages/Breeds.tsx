@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import BreedCard from '../components/Breeds/BreedCard';
 import { breedDatabase } from '../utils/breedData';
-import { BreedFilters } from '../types';
+import type { BreedFilters } from '../types';
 
 const Breeds: React.FC = () => {
   const [filters, setFilters] = useState<BreedFilters>({

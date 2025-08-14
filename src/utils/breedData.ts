@@ -1,4 +1,4 @@
-import { Breed } from '../types';
+import type { Breed } from '../types';
 
 export const breedDatabase: Breed[] = [
   {
