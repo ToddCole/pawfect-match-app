@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-200 transition-colors hover:text-[#F7BE89]">
+                <Link to="/training-tips" className="text-gray-200 transition-colors hover:text-[#F7BE89]">
                   Training Tips
                 </Link>
               </li>
@@ -59,22 +59,22 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4 text-primary-200">Support</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="#" className="text-gray-200 hover:text-primary-200 transition-colors">
+                <Link to="/contact" className="text-gray-200 hover:text-primary-200 transition-colors">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-200 hover:text-primary-200 transition-colors">
+                <Link to="/faq" className="text-gray-200 hover:text-primary-200 transition-colors">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-200 hover:text-primary-200 transition-colors">
+                <Link to="/privacy" className="text-gray-200 hover:text-primary-200 transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-200 hover:text-primary-200 transition-colors">
+                <Link to="/terms" className="text-gray-200 hover:text-primary-200 transition-colors">
                   Terms of Service
                 </Link>
               </li>
