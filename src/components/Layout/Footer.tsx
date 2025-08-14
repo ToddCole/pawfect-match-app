@@ -3,90 +3,90 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="text-white" style={{backgroundColor: '#312032'}}>
-      <div className="max-w-6xl mx-auto p-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          <div className="footer-section">
-            <h3 className="text-xl font-bold mb-4">Pawfect Match</h3>
-            <p className="text-gray-200">
-              Helping families find their perfect canine companions through intelligent breed matching.
-            </p>
-          </div>
-          
-          <div className="footer-section">
-            <h4 className="text-lg font-semibold mb-4" style={{color: '#F7BE89'}}>Resources</h4>
-            <ul className="space-y-2">
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-brand">
+          <h3 className="footer-title">Pawfect Match</h3>
+          <p className="footer-description">
+            Helping families find their perfect canine companions through intelligent breed matching.
+          </p>
+        </div>
+        
+        <div className="footer-columns">
+          <div>
+            <h4 className="footer-column-title">Resources</h4>
+            <ul className="footer-links">
               <li>
-                <Link to="/breeds" className="text-gray-200 transition-colors hover:text-[#F7BE89]">
+                <Link to="/breeds" className="footer-link">
                   Breed Database
                 </Link>
               </li>
               <li>
-                <Link to="/care-guides" className="text-gray-200 transition-colors hover:text-[#F7BE89]">
+                <Link to="/care-guides" className="footer-link">
                   Care Guides
                 </Link>
               </li>
               <li>
-                <Link to="/training-tips" className="text-gray-200 transition-colors hover:text-[#F7BE89]">
+                <Link to="/training-tips" className="footer-link">
                   Training Tips
                 </Link>
               </li>
             </ul>
           </div>
           
-          <div className="footer-section">
-            <h4 className="text-lg font-semibold mb-4 text-primary-200">Find Dogs</h4>
-            <ul className="space-y-2">
+          <div>
+            <h4 className="footer-column-title">Find Dogs</h4>
+            <ul className="footer-links">
               <li>
-                <Link to="#" className="text-gray-200 hover:text-primary-200 transition-colors">
+                <Link to="#" className="footer-link">
                   Local Breeders
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-200 hover:text-primary-200 transition-colors">
+                <Link to="#" className="footer-link">
                   Rescue Organizations
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-200 hover:text-primary-200 transition-colors">
+                <Link to="#" className="footer-link">
                   Adoption Events
                 </Link>
               </li>
             </ul>
           </div>
           
-          <div className="footer-section">
-            <h4 className="text-lg font-semibold mb-4 text-primary-200">Support</h4>
-            <ul className="space-y-2">
+          <div>
+            <h4 className="footer-column-title">Support</h4>
+            <ul className="footer-links">
               <li>
-                <Link to="/contact" className="text-gray-200 hover:text-primary-200 transition-colors">
+                <Link to="/contact" className="footer-link">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-gray-200 hover:text-primary-200 transition-colors">
+                <Link to="/faq" className="footer-link">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="text-gray-200 hover:text-primary-200 transition-colors">
+                <Link to="/privacy" className="footer-link">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-gray-200 hover:text-primary-200 transition-colors">
+                <Link to="/terms" className="footer-link">
                   Terms of Service
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-        
-        <div className="border-t border-gray-600 pt-6 text-center">
-          <p className="text-gray-200">
-            © 2024 PawMatch. All rights reserved. Made with ❤️ for dog lovers everywhere.
-          </p>
-        </div>
+      </div>
+      
+      <div className="footer-bottom">
+        <p className="footer-copyright">
+          © 2024 PawMatch. All rights reserved. Made with ❤️ for dog lovers everywhere.
+        </p>
       </div>
     </footer>
   );

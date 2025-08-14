@@ -10,75 +10,75 @@ const Header: React.FC<HeaderProps> = ({ isAuthenticated, user }) => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="text-white p-4 fixed w-full top-0 z-50 shadow-lg" style={{background: 'linear-gradient(135deg, #E6454A 0%, #312032 100%)'}}>
-      <nav className="max-w-6xl mx-auto flex justify-between items-center">
+    <header className="header">
+      <div className="container">
         <div className="logo">
-          <Link to="/" className="text-2xl font-bold text-white hover:text-gray-100 transition-colors">
+          <Link to="/" className="logo">
             Pawfect Match
           </Link>
         </div>
         
-        <div className="nav-links flex gap-6 items-center">
+        <nav className="nav">
           <Link 
             to="/" 
-            className={`text-white hover:text-gray-100 transition-colors ${isActive('/') ? 'font-bold' : ''}`}
+            className={`nav-link ${isActive('/') ? 'active' : ''}`}
           >
             Home
           </Link>
           <Link 
             to="/breeds" 
-            className={`text-white hover:text-gray-100 transition-colors ${isActive('/breeds') ? 'font-bold' : ''}`}
+            className={`nav-link ${isActive('/breeds') ? 'active' : ''}`}
           >
             Breeds
           </Link>
           <Link 
             to="/about" 
-            className={`text-white hover:text-gray-100 transition-colors ${isActive('/about') ? 'font-bold' : ''}`}
+            className={`nav-link ${isActive('/about') ? 'active' : ''}`}
           >
             About
           </Link>
           <Link 
             to="/care-guides" 
-            className={`text-white hover:text-gray-100 transition-colors ${isActive('/care-guides') ? 'font-bold' : ''}`}
+            className={`nav-link ${isActive('/care-guides') ? 'active' : ''}`}
           >
             Care Guides
           </Link>
           
           {isAuthenticated ? (
-            <div className="flex items-center gap-4">
+            <div className="nav" style={{gap: '1rem'}}>
               <Link 
                 to="/dashboard" 
-                className={`text-white hover:text-gray-100 transition-colors ${isActive('/dashboard') ? 'font-bold' : ''}`}
+                className={`nav-link ${isActive('/dashboard') ? 'active' : ''}`}
               >
                 Dashboard
               </Link>
               <Link 
                 to="/profile" 
-                className="bg-white px-4 py-2 rounded-full hover:bg-gray-100 transition-colors"
-                style={{color: '#312032'}}
+                className="btn-secondary"
+                style={{padding: '0.5rem 1rem', fontSize: '0.9rem'}}
               >
                 {user?.email || 'Profile'}
               </Link>
             </div>
           ) : (
-            <div className="flex gap-3">
+            <div className="nav" style={{gap: '0.75rem'}}>
               <Link 
                 to="/login" 
-                className="text-white hover:text-gray-100 transition-colors"
+                className="nav-link"
               >
                 Login
               </Link>
               <Link 
                 to="/signup" 
-                className="bg-white px-4 py-2 rounded-full hover:bg-gray-100 transition-colors"
-                style={{color: '#312032'}}
+                className="btn-secondary"
+                style={{padding: '0.5rem 1rem', fontSize: '0.9rem'}}
               >
                 Sign Up
               </Link>
             </div>
           )}
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 };

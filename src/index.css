@@ -401,3 +401,165 @@ body {
     margin-bottom: 0.75rem;
   }
 }
+
+/* Page Styles */
+.page {
+  padding: 2rem;
+  min-height: calc(100vh - 80px);
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-400);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.page-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: var(--primary-500);
+}
+
+.page-section {
+  margin-bottom: 3rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-400);
+  margin-bottom: 1rem;
+}
+
+.subsection-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-400);
+  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+}
+
+.page-text {
+  margin-bottom: 1rem;
+  color: var(--primary-500);
+}
+
+.page-list {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.page-list li {
+  margin-bottom: 0.5rem;
+  color: var(--primary-500);
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  color: var(--primary-400);
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--primary-200);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-300);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* FAQ Styles */
+.faq-item {
+  margin-bottom: 1rem;
+  border: 2px solid var(--primary-200);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question {
+  background: var(--primary-100);
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+  color: var(--primary-400);
+}
+
+.faq-question:hover {
+  background: var(--primary-200);
+}
+
+.faq-answer {
+  padding: 1rem;
+  background: white;
+  color: var(--primary-500);
+}
+
+/* Contact Page Styles */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contact-info {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.contact-details h3 {
+  font-weight: 600;
+  color: var(--primary-400);
+  margin-bottom: 0.25rem;
+}
+
+.contact-details p {
+  color: var(--primary-500);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .page {
+    padding: 1rem;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+  }
+}
