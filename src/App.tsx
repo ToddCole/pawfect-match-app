@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import Quiz from './components/Quiz/Quiz';
+import type { BreedMatch } from './types';
 
-// Reusable components
 const Header: React.FC = () => (
   <header className="header">
     <div className="container">
@@ -37,18 +38,6 @@ const Footer: React.FC = () => (
       </p>
     </div>
   </footer>
-);
-
-const QuizView: React.FC<{ onBack: () => void }> = ({ onBack }) => (
-  <div className="quiz-container">
-    <div className="card quiz-card">
-      <h2 className="quiz-title">Dog Breed Quiz</h2>
-      <p className="quiz-description">Quiz functionality coming soon!</p>
-      <button className="btn-secondary" onClick={onBack}>
-        Back to Home
-      </button>
-    </div>
-  </div>
 );
 
 const HomeView: React.FC<{ onStartQuiz: () => void }> = ({ onStartQuiz }) => (
@@ -93,12 +82,17 @@ const HomeView: React.FC<{ onStartQuiz: () => void }> = ({ onStartQuiz }) => (
 const App: React.FC = () => {
   const [showQuiz, setShowQuiz] = useState(false);
 
+  const handleQuizComplete = (results: BreedMatch[]) => {
+    console.log('Quiz completed with results:', results);
+    setShowQuiz(false);
+  };
+
   return (
     <div className="app">
       <Header />
       <main className="main">
         {showQuiz ? (
-          <QuizView onBack={() => setShowQuiz(false)} />
+          <Quiz onComplete={handleQuizComplete} />
         ) : (
           <HomeView onStartQuiz={() => setShowQuiz(true)} />
         )}
