@@ -81,35 +81,49 @@ const HomeView: React.FC<{ onStartQuiz: () => void }> = ({ onStartQuiz }) => (
   <>
     <section className="hero">
       <div className="hero-content">
-        <h1 className="hero-title">Find Your Pawfect Dog Breed Match</h1>
+        <h1 className="hero-title">Find The Dog for Your Lifestyle</h1>
         <p className="hero-description">
-          Discover the ideal canine companion based on your lifestyle, preferences, and living situation.
+          Forget scrolling endless breed lists or window shopping in pet shops — we'll match you with the dog that truly fits your life.
+        </p>
+        <p className="hero-subdescription">
+          Take our quick lifestyle quiz and our smart matching system will pair you with your ideal breed from over 200 carefully profiled dogs.
         </p>
         <button className="btn-primary hero-button" onClick={onStartQuiz}>
-          Start Matching Quiz
+          Start Matching Now
         </button>
       </div>
     </section>
 
     <section className="features">
       <div className="container">
-        <h2 className="section-title">Why Choose Pawfect Match?</h2>
+        <h2 className="section-title">Why It Works</h2>
         <div className="features-grid">
           <FeatureCard 
-            icon="🏠" 
-            title="Lifestyle Matching" 
-            description="We consider your living space, activity level, and daily routine."
+            icon="❓" 
+            title="Quick Quiz" 
+            description="Tell us about your home, energy, and what you want in a dog."
+          />
+          <FeatureCard 
+            icon="🧠" 
+            title="Smart Match" 
+            description="Our algorithm finds breeds that tick your boxes."
           />
           <FeatureCard 
             icon="🎯" 
-            title="Personalized Results" 
-            description="Get detailed breed recommendations with compatibility scores."
+            title="Tailored Results" 
+            description="Get your top matches with compatibility scores and must-know insights."
           />
-          <FeatureCard 
-            icon="📚" 
-            title="Expert Knowledge" 
-            description="Information from veterinarians and dog experts."
-          />
+        </div>
+      </div>
+    </section>
+
+    <section className="cta-section">
+      <div className="container">
+        <div className="cta-content">
+          <h2 className="cta-title">200+ Breeds. One Perfect Match.</h2>
+          <p className="cta-description">
+            We've analysed over 200 breeds in detail — so you can skip the guesswork and meet your perfect dog sooner.
+          </p>
         </div>
       </div>
     </section>
