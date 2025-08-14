@@ -29,13 +29,50 @@ const FeatureCard: React.FC<{ icon: string; title: string; description: string }
 const Footer: React.FC = () => (
   <footer className="footer">
     <div className="container">
-      <h3 className="footer-title">Pawfect Match</h3>
-      <p className="footer-description">
-        Helping families find their perfect canine companions through intelligent breed matching.
-      </p>
-      <p className="footer-copyright">
-        © 2024 PawMatch. All rights reserved. Made with ❤️ for dog lovers everywhere.
-      </p>
+      <div className="footer-content">
+        <div className="footer-brand">
+          <h3 className="footer-title">Pawfect Match</h3>
+          <p className="footer-description">
+            Helping families find their perfect canine companions through intelligent breed matching.
+          </p>
+        </div>
+
+        <div className="footer-columns">
+          <div className="footer-column">
+            <h4 className="footer-column-title">Resources</h4>
+            <ul className="footer-links">
+              <li><a href="#" className="footer-link">Breed Database</a></li>
+              <li><a href="#" className="footer-link">Care Guides</a></li>
+              <li><a href="#" className="footer-link">Training Tips</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            <h4 className="footer-column-title">Find Dogs</h4>
+            <ul className="footer-links">
+              <li><a href="#" className="footer-link">Local Breeders</a></li>
+              <li><a href="#" className="footer-link">Rescue Organisations</a></li>
+              <li><a href="#" className="footer-link">Adoption Events</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            <h4 className="footer-column-title">Support</h4>
+            <ul className="footer-links">
+              <li><a href="#" className="footer-link">Contact Us</a></li>
+              <li><a href="#" className="footer-link">FAQ</a></li>
+              <li><a href="#" className="footer-link">Privacy Policy</a></li>
+              <li><a href="#" className="footer-link">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <p className="footer-copyright">
+          © 2024 PawMatch. All rights reserved. Made with ❤️ for dog lovers everywhere.
+        </p>
+      </div>
     </div>
   </footer>
 );
