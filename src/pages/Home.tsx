@@ -21,7 +21,7 @@ const Home: React.FC = () => {
       <section className="hero">
         <div className="hero-content">
           <h1 className="hero-title">
-            Find Your Pawfect Dog Breed Match EDITED
+            Find Your Pawfect Dog Breed Match And NOW Fixed EDITED
           </h1>
           <p className="hero-description">
             Discover PUPPY companion based on your lifestyle, preferences, and living situation.
@@ -39,7 +39,7 @@ const Home: React.FC = () => {
       <section className="features">
         <div className="container">
           <h2 className="section-title">
-            Why Choose Pawfect Match?
+            Why Choose Pawfect Match Why NOT?
           </h2>
           
           <div className="features-grid">
