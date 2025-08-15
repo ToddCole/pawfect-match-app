@@ -21,10 +21,10 @@ const Home: React.FC = () => {
       <section className="hero">
         <div className="hero-content">
           <h1 className="hero-title">
-            Find Your Pawfect Dog Breed Match
+            Find Your Pawfect Dog Breed Match EDITED
           </h1>
           <p className="hero-description">
-            Discover the ideal canine companion based on your lifestyle, preferences, and living situation.
+            Discover PUPPY companion based on your lifestyle, preferences, and living situation.
           </p>
           <button
             onClick={() => setShowQuiz(true)}
