@@ -18,20 +18,17 @@ const Home: React.FC = () => {
   return (
     <div className="app">
       {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-content">
-          <h1 className="hero-title">
-            Find Your Pawfect Dog Breed Match And NOW Fixed EDITED
-          </h1>
-          <p className="hero-description">
-            Discover PUPPY companion based on your lifestyle, preferences, and living situation.
-          </p>
-          <button
-            onClick={() => setShowQuiz(true)}
-            className="btn-primary hero-button"
-          >
-            Start Matching Quiz
-          </button>
+      <section className="hero" style={{ backgroundImage: 'url(/images/hero-dogs.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="hero-overlay">
+          <div className="hero-content">
+            <h1 className="hero-title">Find Your Pawfect Match</h1>
+            <p className="hero-description">
+              Discover your ideal dog breed based on your lifestyle and preferences.
+            </p>
+            <button onClick={() => setShowQuiz(true)} className="btn-primary hero-button">
+              Start Matching Quiz
+            </button>
+          </div>
         </div>
       </section>
 

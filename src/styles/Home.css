@@ -1,0 +1,28 @@
+.hero {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+}
+
+.testimonials {
+  background: #f9f9f9;
+  padding: 2rem;
+}

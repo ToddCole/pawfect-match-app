@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
+import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
 import Breeds from './pages/Breeds';
@@ -10,11 +11,13 @@ import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import BreedOfTheWeek from './components/BreedOfTheWeek';
 
 const App: React.FC = () => {
   return (
     <Router>
       <Layout>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -26,6 +29,7 @@ const App: React.FC = () => {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
         </Routes>
+        <BreedOfTheWeek />
       </Layout>
     </Router>
   );
