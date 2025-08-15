@@ -1,0 +1,748 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #312032;
+    background-color: #F7F5F3;
+}
+
+.header {
+    background: linear-gradient(135deg, #E6454A 0%, #312032 100%);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #312032;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #8B6F47;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #E6454A 0%, #312032 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(230, 69, 74, 0.3);
+}
+
+
+.quiz-section {
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem;
+    background: white;
+}
+
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(135deg, #E6454A 0%, #F7BE89 100%);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+.question-container {
+    margin-bottom: 2rem;
+}
+
+.question {
+    display: none;
+}
+
+.question.active {
+    display: block;
+}
+
+.question h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #312032;
+}
+
+.options {
+    display: grid;
+    gap: 1rem;
+}
+
+.option {
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: white;
+}
+
+.option:hover {
+    border-color: #E6454A;
+    background: #FDF8F5;
+}
+
+.option.selected {
+    border-color: #E6454A;
+    background: #E6454A;
+    color: white;
+}
+
+.quiz-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.quiz-navigation button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+#prevBtn {
+    background: #6c757d;
+    color: white;
+}
+
+#nextBtn {
+    background: linear-gradient(135deg, #E6454A 0%, #312032 100%);
+    color: white;
+}
+
+#prevBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.results-section {
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem;
+    background: linear-gradient(135deg, #E6454A 0%, #312032 100%);
+    color: white;
+}
+
+.results-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.results-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.breed-card {
+    background: white;
+    color: #333;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 1rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.breed-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #312032;
+}
+
+.breed-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.info-item {
+    text-align: left;
+}
+
+.info-item strong {
+    display: block;
+    color: #E6454A;
+    margin-bottom: 0.3rem;
+}
+
+.restart-button {
+    background: white;
+    color: #E6454A;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: all 0.3s;
+}
+
+.restart-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+}
+
+.about-section {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #312032;
+}
+
+.about-content > p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #8B6F47;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature {
+    padding: 2rem;
+    border-radius: 15px;
+    background: #FDF8F5;
+    border: 2px solid #F7BE89;
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #312032;
+}
+
+.footer {
+    background: #312032;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.care-guides-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #F7BE89 0%, #FDF8F5 100%);
+}
+
+.care-guides-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.care-guides-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #312032;
+}
+
+.care-guides-content > p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #8B6F47;
+}
+
+.care-topics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.care-topic {
+    padding: 2rem;
+    border-radius: 15px;
+    background: white;
+    border: 2px solid #F7BE89;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.care-topic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(230, 69, 74, 0.1);
+}
+
+.care-topic h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #312032;
+}
+
+.care-topic p {
+    color: #8B6F47;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 8rem 1rem 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .quiz-container {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .care-topics {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer Styles */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #F7BE89;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #F7BE89;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+/* About Page Styles */
+.mission-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #FDF8F5;
+    border-radius: 15px;
+    border: 2px solid #F7BE89;
+}
+
+.mission-section h3 {
+    color: #312032;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.how-it-works {
+    margin: 3rem 0;
+}
+
+.how-it-works h3 {
+    color: #312032;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    text-align: center;
+    padding: 2rem;
+    background: #FDF8F5;
+    border-radius: 15px;
+    border: 2px solid #F7BE89;
+}
+
+.step h4 {
+    color: #E6454A;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.commitment {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #F7BE89 0%, #FDF8F5 100%);
+    border-radius: 15px;
+}
+
+.commitment h3 {
+    color: #312032;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Breeds Page Styles */
+.breeds-section {
+    padding: 6rem 2rem 2rem;
+    min-height: 100vh;
+}
+
+.breeds-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.breeds-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #312032;
+    text-align: center;
+}
+
+.breeds-content > p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #8B6F47;
+    text-align: center;
+}
+
+.search-filters {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+    border: 2px solid #F7BE89;
+}
+
+.search-bar {
+    margin-bottom: 2rem;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #F7BE89;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: #E6454A;
+    outline: none;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #F7BE89;
+    background: white;
+    color: #312032;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+    background: #F7BE89;
+    color: white;
+}
+
+.filter-btn.active {
+    background: #E6454A;
+    color: white;
+    border-color: #E6454A;
+}
+
+.breeds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.breed-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid #F7BE89;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.breed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(230, 69, 74, 0.1);
+}
+
+.breed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.breed-header h3 {
+    color: #312032;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.breed-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.badge.size-small { background: #E6454A; color: white; }
+.badge.size-medium { background: #F7BE89; color: #312032; }
+.badge.size-large { background: #312032; color: white; }
+.badge.size-giant { background: #8B6F47; color: white; }
+
+.badge.energy-low { background: #B8E6B8; color: #2D5A2D; }
+.badge.energy-moderate { background: #F7BE89; color: #312032; }
+.badge.energy-high { background: #E6454A; color: white; }
+
+.breed-description {
+    color: #8B6F47;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.breed-details {
+    margin-bottom: 1.5rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #F7BE89;
+}
+
+.detail-label {
+    font-weight: bold;
+    color: #312032;
+}
+
+.detail-value {
+    color: #8B6F47;
+}
+
+.breed-temperament {
+    margin-bottom: 1rem;
+    color: #312032;
+}
+
+.temperament-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.temperament-tag {
+    background: #FDF8F5;
+    color: #312032;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid #F7BE89;
+}
+
+.breed-origin {
+    color: #8B6F47;
+    font-size: 0.9rem;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: #8B6F47;
+    font-size: 1.2rem;
+}
+
+/* Enhanced care guides page styles */
+.care-topic ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.care-topic ul li {
+    padding: 0.3rem 0;
+    color: #8B6F47;
+    border-bottom: 1px solid #F7BE89;
+}
+
+.care-topic ul li:before {
+    content: "✓ ";
+    color: #E6454A;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .breeds-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .breed-card {
+        padding: 1.5rem;
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .steps {
+        grid-template-columns: 1fr;
+    }
+}

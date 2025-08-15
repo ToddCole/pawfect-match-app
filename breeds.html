@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breed Database - Pawfect Match</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <h2>Pawfect Match</h2>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#quiz">Find My Breed</a>
+                <a href="breeds.html">Breeds</a>
+                <a href="about.html">About</a>
+                <a href="care-guides.html">Care Guides</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="breeds-section">
+            <div class="breeds-content">
+                <h2>Dog Breed Database</h2>
+                <p>Explore our comprehensive database of dog breeds with detailed information about each breed's characteristics, care requirements, and temperament.</p>
+                
+                <div class="search-filters">
+                    <div class="search-bar">
+                        <input type="text" id="breedSearch" placeholder="Search breeds..." onkeyup="filterBreeds()">
+                    </div>
+                    
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" onclick="filterBySize('all')">All Sizes</button>
+                        <button class="filter-btn" onclick="filterBySize('small')">Small</button>
+                        <button class="filter-btn" onclick="filterBySize('medium')">Medium</button>
+                        <button class="filter-btn" onclick="filterBySize('large')">Large</button>
+                        <button class="filter-btn" onclick="filterBySize('giant')">Giant</button>
+                    </div>
+                    
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" onclick="filterByEnergy('all')">All Energy</button>
+                        <button class="filter-btn" onclick="filterByEnergy('low')">Low Energy</button>
+                        <button class="filter-btn" onclick="filterByEnergy('moderate')">Moderate</button>
+                        <button class="filter-btn" onclick="filterByEnergy('high')">High Energy</button>
+                    </div>
+                </div>
+
+                <div class="breeds-grid" id="breedsGrid">
+                    <!-- Breed cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pawfect Match</h3>
+                <p>Helping families find their perfect canine companions through intelligent breed matching.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="breeds.html">Breed Database</a></li>
+                    <li><a href="care-guides.html">Care Guides</a></li>
+                    <li><a href="#">Training Tips</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Find Dogs</h4>
+                <ul>
+                    <li><a href="#">Local Breeders</a></li>
+                    <li><a href="#">Rescue Organizations</a></li>
+                    <li><a href="#">Adoption Events</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Contact Media Pty Ltd . All rights reserved. Made with ❤️ for dog lovers everywhere.</p>
+        </div>
+    </footer>
+
+    <script src="breeds.js"></script>
+</body>
+</html>
